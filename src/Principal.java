@@ -1,18 +1,18 @@
+import rajo.screenmatch.models.Films;
+
 public class Principal {
     public static void main(String[] args) {
-        Films meuFilme = new Films();
-        meuFilme.name = "O Poderoso Chefão";
-        meuFilme.releaseYear = 1970;
-        meuFilme.durationMovie = 120;
+        Films movie = new Films();
+        movie.setName("O Poderoso Chefão");
+        movie.setReleaseYear(1970);
+        movie.setDurationMovie(120);
+        movie.setIncludedPlan(true);
 
-        meuFilme.showTechnicalDataSheet();
-        meuFilme.assessment(8.5);
-        meuFilme.assessment(10.0);
-        meuFilme.assessment(7.8);
+        movie.showTechnicalDataSheet();
+        movie.assessment(8.5);
+        movie.assessment(10.0);
+        movie.assessment(7.8);
 
-        System.out.println(meuFilme.assessmentMoviesSum);
-        System.out.println(meuFilme.assessmentTotal);
-        System.out.println(meuFilme.getAssementMean());
-
+        System.out.println("Média das Avaliações: " + movie.getAssessmentMean());
     }
 }
