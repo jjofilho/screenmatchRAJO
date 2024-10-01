@@ -1,27 +1,27 @@
 package rajo.screenmatch.models;
 
-public class Films {
+public class Title {
     private String name;
     private int releaseYear;
     private boolean includedPlan;
-    private double assessmentMoviesSum;
+    private double assessmentSum;
     private int assessmentTotal;
-    private int durationMovie;
+    private int duration;
 
     public void showTechnicalDataSheet() {
-        System.out.println("Movie Name: " + name);
-        System.out.println("Release Year: " + releaseYear);
-        System.out.println("Duração: " + durationMovie);
-        System.out.println("Incluído no Plano: " + includedPlan);
+        System.out.println("Name: " + name);
+        System.out.println("Year: " + releaseYear);
+        System.out.println("Included Plan: " + includedPlan);
+        System.out.println("Assessment Mean: " + getAssessmentMean());
     }
 
     public void assessment(double note) {
-        assessmentMoviesSum += note;
+        assessmentSum += note;
         assessmentTotal ++;
     }
 
     public double getAssessmentMean() {
-        return assessmentMoviesSum / assessmentTotal;
+        return assessmentSum / assessmentTotal;
     }
 
     public void setName(String name) {
@@ -36,8 +36,8 @@ public class Films {
         this.includedPlan = includedPlan;
     }
 
-    public void setDurationMovie(int durationMovie) {
-        this.durationMovie = durationMovie;
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
 
     public String getName() {
@@ -52,12 +52,12 @@ public class Films {
         return includedPlan;
     }
 
-    public int getDurationMovie() {
-        return durationMovie;
+    public int getDuration() {
+        return duration;
     }
 
-    public double getAssessmentMoviesSum() {
-        return assessmentMoviesSum;
+    public double getAssessmentSum() {
+        return assessmentSum;
     }
 
     public int getAssessmentTotal() {
